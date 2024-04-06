@@ -1,9 +1,10 @@
 package com.application.learnspring.game;
 
 public class GameRunner {
-    private MarioGame game;
-    public GameRunner(MarioGame game) {
-        this.game = game;
+    GamingConsole game;
+
+    public GameRunner(GamingConsole game) {
+        this.game = game; // reference of a superclass = object of a subclass
     }
 
     public void run() {

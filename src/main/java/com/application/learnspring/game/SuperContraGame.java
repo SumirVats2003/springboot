@@ -1,6 +1,6 @@
 package com.application.learnspring.game;
 
-public class MarioGame implements GamingConsole {
+public class SuperContraGame implements GamingConsole {
     public void up() {
         System.out.println("Up");
     }
