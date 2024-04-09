@@ -1,5 +1,6 @@
 package com.application.learnspring;
 
+import com.application.learnspring.enterprise.example.MyWebController;
 import com.application.learnspring.game.GameRunner;
 import com.application.learnspring.game.GamingConsole;
 import com.application.learnspring.game.MarioGame;
@@ -21,8 +22,10 @@ public class LearnSpringApplication {
 		// GameRunner runner = new GameRunner(superContraGame);
 
 		GameRunner runner = context.getBean(GameRunner.class);
-
 		runner.run();
+
+		MyWebController controller = context.getBean(MyWebController.class);
+		System.out.println(controller.returnValueFromBusinessService());
 	}
 
 }
