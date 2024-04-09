@@ -1,19 +1,27 @@
 package com.application.learnspring;
 
 import com.application.learnspring.game.GameRunner;
+import com.application.learnspring.game.GamingConsole;
 import com.application.learnspring.game.MarioGame;
 import com.application.learnspring.game.SuperContraGame;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class LearnSpringApplication {
 
 	public static void main(String[] args) {
-		// SpringApplication.run(LearnSpringApplication.class, args);
-		MarioGame marioGame = new MarioGame();
-		SuperContraGame superContraGame = new SuperContraGame();
+		ConfigurableApplicationContext context = SpringApplication.run(LearnSpringApplication.class, args);
+		// The above line creates an application context
+
+		// GamingConsole marioGame = new MarioGame(); // reference of a superclass = object of a subclass
+		// GamingConsole superContraGame = new SuperContraGame(); // reference of a superclass = object of a subclass
 		// GameRunner runner = new GameRunner(marioGame);
-		GameRunner runner = new GameRunner(superContraGame);
+		// GameRunner runner = new GameRunner(superContraGame);
+
+		GameRunner runner = context.getBean(GameRunner.class);
+
 		runner.run();
 	}
 

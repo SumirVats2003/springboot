@@ -2,15 +2,15 @@ package com.application.learnspring.game;
 
 public class SuperContraGame implements GamingConsole {
     public void up() {
-        System.out.println("Up");
+        System.out.println("Super Contra Up");
     }
     public void down() {
-        System.out.println("Down");
+        System.out.println("Super Contra Down");
     }
     public void left() {
-        System.out.println("Left");
+        System.out.println("Super Contra Left");
     }
     public void right() {
-        System.out.println("Right");
+        System.out.println("Super Contra Right");
     }
 }
